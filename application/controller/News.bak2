@@ -1,9 +1,9 @@
 <?php
-class News extends CI_Controller {
 //news.php controller
+class News extends CI_Controller {
 
         public function __construct()
-        {
+        {//everything here is golobal to all methods in the controller
                 parent::__construct();
                  $this->load->model('news_model');
                  $this->config->set_item('banner','Global News Banner');
@@ -13,6 +13,9 @@ class News extends CI_Controller {
     {
             $data['news'] = $this->news_model->get_news();
             $data['title'] = 'News archive';
+//            $data['xml'] = $this->Rss_model->get_rss($id);
+//            $this->load->view('news/rss.php',$data);
+//           // $this->load->view('news/rss', $data);
            
             // $this->config->set_item('banner','News Banner');
           // $this->load->view('templates/header', $data);
@@ -33,11 +36,30 @@ class News extends CI_Controller {
            
             $data['title'] = $data['news_item']['title'];
            
-        
-       
             $this->load->view('news/view', $data);
           
-    }//end View()
+    }
+
+    public function rssit($id = 0)
+           
+    {
+
+            $data['news_rss'] = $this->Rss_model->get_rss($id);
+            $this->load->view('rss.php', $data);
+
+            // if (empty($data['news_rss']))
+            // {
+            //         show_404();
+            // }
+
+           
+            // $data['title'] = $data['news_rss']['title'];
+           
+        
+            // $this->load->view('templates/header', $data);
+            // $this->load->view('news/rssit', $data);
+            // $this->load->view('templates/footer');
+    }
     
     
         public function create()
