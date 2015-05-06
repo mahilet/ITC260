@@ -14,7 +14,7 @@
 * @todo none
 */
 
-    
+
 /**
 * Customer controller foe our CRUD demo
 * @see Customer_model
@@ -22,19 +22,14 @@
 * @todo none
 */
 class Customer extends CI_Controller {
-
        /**
         * load default data into object
-        *
-        * Added in v3 - Result object
         *
         * @param none
 
         * @return void
         * @todo none
         */
-
-
         public function __construct()
         {//everything here is golobal to all method in the controller
                 parent::__construct();
@@ -43,8 +38,6 @@ class Customer extends CI_Controller {
                  $this->config->set_item('banner','Global News Banner');
             */
         }// end constructor
-    
-    
            /**
             * shows initial Customer Database data
             * @param none
@@ -53,17 +46,14 @@ class Customer extends CI_Controller {
             * @todo none
             */
 
-
        public function index()
     {
-           
 
            // $data['news'] = $this->rss_model->get_news();
             $data['title'] = 'Customer';
             $this->load->view('customer/index', $data);
 
-       
     }// end index()
-    
-    
-} # end Customer class/controller
+
+
+} # end Customer class/controller()
