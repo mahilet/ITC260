@@ -16,7 +16,7 @@
 
 
 /**
-* Customer controller foe our CRUD demo
+* Customer controller for our CRUD demo
 * @see Customer_model
 
 * @todo none
@@ -33,10 +33,10 @@ class Customer extends CI_Controller {
         public function __construct()
         {//everything here is golobal to all method in the controller
                 parent::__construct();
-            /*
-                 $this->load->model('news_model');
-                 $this->config->set_item('banner','Global News Banner');
-            */
+
+                 $this->load->model('customer_model');
+                 $this->config->set_item('banner','Global Customer Banner');
+
         }// end constructor
            /**
             * shows initial Customer Database data
@@ -50,6 +50,9 @@ class Customer extends CI_Controller {
     {
 
            // $data['news'] = $this->rss_model->get_news();
+           $data['query'] = $this->customer_model->get_customers();
+          //  var_damp($data);
+
             $data['title'] = 'Customer';
             $this->load->view('customer/index', $data);
 

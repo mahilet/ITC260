@@ -5,7 +5,7 @@
 *
 * Used to show how to do CRUD in CodeIgniter
 * views/customer/index.php
-    
+
 * @package ITC260
 * @subpackage Customer
 * @author Mahilet Hiemeariam <mhalle02@seattlecentral.edu/http:>
@@ -23,8 +23,18 @@ $this->load->view($this->config->item('theme').'header');
 
 <h2><?php echo $title ?></h2>
 
+<?php foreach ($query as $customer): ?>
+
 <?php
-    
-        
+
+    echo $customer['firstName'] . "<br />";
+    ?>
+</p>
+
+<?php endforeach ?>
+
+
+<?php
+
 $this->load->view($this->config->item('theme').'footer');
 ?>
