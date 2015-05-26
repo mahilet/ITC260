@@ -1,0 +1,78 @@
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif, "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.5;
+    color: #000000;
+}
+
+h1 {
+    text-align: left;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #49710c;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.85em;
+    font-weight: 600;
+    color: #ff9800;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #01a8e7;
+}
+
+fieldset {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 0.25em;
+    padding-bottom: 0.50em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: solid #05C7F2 5px;
+    border-radius:10px;
+}
+
+legend {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom:5px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+select {
+    margin: 5px 0;
+}
+
+input[type=text], input[email] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 20px;
+}
+
+input[type=checkbox]{
+    margin-right: 3px;
+}
+
+form p {
+    margin: 0 0 3px 5px;
+}
